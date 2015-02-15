@@ -92,14 +92,12 @@ public class Board {
 		if (getTile(0, move.getColumn()) != null) {
 			throw new IllegalArgumentException();
 		} else {
-//			while(getTile(0, move.getColumn()) != null) {
 				for (int i = 5; i >= 0; i--) {
 				if (board[i][move.getColumn()] == null)
 					row = i;
 					possiblePositions[i] = i;
 				}
-//				}
-		
+				
 		for (iterator = 0; iterator <= 5; iterator ++){
 			if (possiblePositions[iterator]>lowest) {
 				lowest = possiblePositions[iterator];
